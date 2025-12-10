@@ -67,9 +67,12 @@ Developed by: HARINARAYANAN.A  RegisterNumber:25017317
 
 
 **RTL LOGIC FOR FLIPFLOPS**
-![image](https://github.com/user-attachments/assets/01ca152a-084c-4d79-bcb7-a298419f157a)
+<img width="1920" height="1080" alt="Screenshot 2025-12-10 114104" src="https://github.com/user-attachments/assets/0d1849e1-d9ad-4d73-94aa-45b5af2442bc" />
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![image](https://github.com/user-attachments/assets/6d6718d5-06d6-437e-9bf7-57a508941491)
+<img width="1920" height="1080" alt="Screenshot 2025-12-10 114731" src="https://github.com/user-attachments/assets/f2230199-07fd-47e9-a34a-6acea57e63c8" />
+
 **RESULTS**
 Thus the OUTPUT’s of SR Flip Flop is verified by synthesizing and simulating the VERILOG code
 
