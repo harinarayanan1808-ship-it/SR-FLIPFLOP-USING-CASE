@@ -66,7 +66,7 @@ Developed by: HARINARAYANAN.A  RegisterNumber:25017317
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-<img width="1920" height="1080" alt="Screenshot 2025-12-10 114731" src="https://github.com/user-attachments/assets/f2230199-07fd-47e9-a34a-6acea57e63c8" />
+![image](https://github.com/user-attachments/assets/3ada51b7-62e4-4a46-b149-239451bac46f)
 
 **RESULTS**
 Thus the OUTPUT’s of SR Flip Flop is verified by synthesizing and simulating the VERILOG code
