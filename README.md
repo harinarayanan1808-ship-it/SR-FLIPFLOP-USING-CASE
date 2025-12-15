@@ -33,42 +33,55 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=S+R′Q(t)Q(t+1)=S+R′Q(t)
 
 **Procedure**
-1. Type the program in Quartus software.
-2. Compile and run the program.
-3. Generate the RTL schematic and save the logic diagram.
-4. Create nodes for inputs and outputs to generate the timing diagram.
-5. For different input combinations generate the timing diagram.
+
+1 Open Quartus software and create a new project. 
+
+2 Create a new VHDL file and write the code for the SR Flip Flop. 
+
+3 Compile the design by clicking on "Processing" -> "Start Compilation". 
+
+4 Create a testbench file to simulate the design. 
+
+5 Write the testbench code and add stimulus to test the SR Flip Flop. 
+
+6 Run the simulation by clicking on "Processing" -> "Start Simulation". 
+
+7 Observe the waveforms and verify the SR Flip Flop behavior. 
+
+8 Analyze the results and make any necessary changes to the design.
 
 **PROGRAM**
 ```
-module srflipflop(s,r,clk,q,qbar);
-input s,r,clk;
-output reg q;
-output reg qbar;
-initial 
-begin
-q=0;
-qbar=1;
-end
-always @(posedge clk)
-begin
-   q=s|(~r&q);
-   qbar=r|(~s&~q);
-end
+module sr_ff (
+    input  wire clk, rst, S, R,
+    output reg  Q
+);
+    always @(posedge clk) begin
+        if (rst)
+            Q <= 1'b0;         // Reset
+        else begin
+            case ({S,R})
+                2'b00: Q <= Q;     // No change
+                2'b01: Q <= 1'b0;  // Reset
+                2'b10: Q <= 1'b1;  // Set
+                2'b11: Q <= 1'bx;  // Invalid
+            endcase
+        end
+    end
 endmodule
 ```
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+<img width="738" height="402" alt="Screenshot 2025-11-18 211353" src="https://github.com/user-attachments/assets/2ff8aef3-67ee-4483-96e3-673ac04b904c" />
 
 Developed by: HARINARAYANAN.A  RegisterNumber:25017317
 
 
 **RTL LOGIC FOR FLIPFLOPS**
-<img width="1920" height="1080" alt="Screenshot 2025-12-10 114104" src="https://github.com/user-attachments/assets/0d1849e1-d9ad-4d73-94aa-45b5af2442bc" />
-
-
+<img width="1016" height="577" alt="image" src="https://github.com/user-attachments/assets/2a272c17-6f1c-4145-a438-07c674fd78a4" />
 **TIMING DIGRAMS FOR FLIP FLOPS**
 ![image](https://github.com/user-attachments/assets/3ada51b7-62e4-4a46-b149-239451bac46f)
 
 **RESULTS**
-Thus the OUTPUT’s of SR Flip Flop is verified by synthesizing and simulating the VERILOG code
+Thus the JK flipflop is implemented and verified.
 
 
